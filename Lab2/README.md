@@ -24,7 +24,7 @@ For each combination, we note its results on the memory accesses and the memory 
 <img src="https://user-images.githubusercontent.com/50949470/111882713-b72ef980-89bf-11eb-838f-9e88d2b739ef.png" width="400" height=auto>
 
 ## Dijkstra
-The dijkstra algorithm finds the shortest path in a table of size 100x100. The nodes are stored in one list. We applied the DDTR methodology for this application. After we inserted the library in the application, we replaced its data structure, with the data structures of the DDTR library. The full steps are presented in the [report](https://github.com/chrisbetze/Embedded-System-Design/blob/91a22a26b7c050c0189c8f9789ee26b26646fb72/Lab2/report.pdf).
+The dijkstra algorithm finds the shortest path in a table of size 100x100. The nodes are stored in one list. We applied the DDTR methodology for this application. After we inserted the library in the application, we replaced its data structure, with the data structures of the DDTR library. The full steps are presented in the report
 
 We run the application with all the different combinations of data structures.
 * Single Linked List (SLL)
