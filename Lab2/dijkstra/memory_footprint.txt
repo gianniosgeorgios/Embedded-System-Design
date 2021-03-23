@@ -1,0 +1,839 @@
+--------------------------------------------------------------------------------
+Command:            ./dijkstra_opt_sll input.dat
+Massif arguments:   (none)
+ms_print arguments: massif.out.3180
+--------------------------------------------------------------------------------
+
+
+    KB
+707.7^                                                                       #
+     |                                                                    ::@#
+     |                                                                  :@::@#
+     |                                                              :@@::@::@#
+     |                                                           ::::@ ::@::@#
+     |                                                        :::: ::@ ::@::@#
+     |                                                      ::: :: ::@ ::@::@#
+     |                                                 @::::::: :: ::@ ::@::@#
+     |                                               ::@: : ::: :: ::@ ::@::@#
+     |                                           :@@:: @: : ::: :: ::@ ::@::@#
+     |                                        ::::@ :: @: : ::: :: ::@ ::@::@#
+     |                                     :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                                 :::::::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                             ::::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                          :::: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                       :::: :: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                     :::::: :: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |                 ::::: :::: :: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |             ::@:::: : :::: :: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+     |           ::: @:::: : :::: :: ::::: :::::::@ :: @: : ::: :: ::@ ::@::@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   61.70
+
+Number of snapshots: 69
+ Detailed snapshots: [8, 32, 36, 46, 49, 59, 68 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        190,669            4,896            4,856            40            0
+  2      7,170,342            4,920            4,868            52            0
+  3      7,732,722           22,728           15,256         7,472            0
+  4      9,116,117           33,048           21,276        11,772            0
+  5     10,262,226           44,280           27,828        16,452            0
+  6     11,602,288           69,408           42,908        26,500            0
+  7     12,490,179           76,896           47,276        29,620            0
+  8     13,510,840           93,096           56,728        36,368            0
+60.93% (56,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.21% (29,056B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->31.21% (29,056B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->31.16% (29,008B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->31.16% (29,008B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.05% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->23.41% (21,792B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->23.37% (21,756B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->23.37% (21,756B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.04% (36B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.50% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.50% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->04.40% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->04.40% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->04.40% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->04.40% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->04.40% (4,096B) 0x40137F: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |         
+|   ->01.10% (1,024B) 0x50E1566: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:759)
+|     ->01.10% (1,024B) 0x50DFABB: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+|       ->01.10% (1,024B) 0x50AF632: vfprintf (vfprintf.c:1328)
+|         ->01.10% (1,024B) 0x50B9014: printf (printf.c:33)
+|           ->01.10% (1,024B) 0x4012AD: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|             ->01.10% (1,024B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|               
+->00.82% (760B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  9     14,413,597          104,112           63,152        40,960            0
+ 10     15,809,037          117,456           70,936        46,520            0
+ 11     16,674,667          125,376           75,556        49,820            0
+ 12     17,682,094          144,816           86,896        57,920            0
+ 13     19,310,543          158,688           94,988        63,700            0
+ 14     20,699,347          181,440          108,260        73,180            0
+ 15     21,624,543          189,936          113,216        76,720            0
+ 16     22,507,269          198,096          117,976        80,120            0
+ 17     23,945,814          220,464          131,024        89,440            0
+ 18     25,554,781          247,440          146,760       100,680            0
+ 19     26,899,025          257,184          152,444       104,740            0
+ 20     28,125,342          267,792          158,632       109,160            0
+ 21     28,899,906          285,408          168,908       116,500            0
+ 22     29,837,374          292,128          172,828       119,300            0
+ 23     30,804,183          308,928          182,628       126,300            0
+ 24     32,025,297          322,608          190,608       132,000            0
+ 25     33,395,923          346,272          204,412       141,860            0
+ 26     34,199,903          352,896          208,276       144,620            0
+ 27     35,475,738          360,720          212,840       147,880            0
+ 28     36,589,055          383,472          226,112       157,360            0
+ 29     37,430,485          390,192          230,032       160,160            0
+ 30     38,426,325          396,864          233,924       162,940            0
+ 31     39,102,998          414,624          244,284       170,340            0
+ 32     40,202,997          423,696          249,576       174,120            0
+58.90% (249,576B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.87% (139,248B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->32.87% (139,248B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->32.82% (139,056B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->32.82% (139,056B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.05% (192B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.65% (104,448B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.62% (104,304B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.62% (104,304B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (144B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.21% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.21% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.21% (5,120B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.18% (760B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33     41,369,622          434,016          255,596       178,420            0
+ 34     42,272,543          454,032          267,272       186,760            0
+ 35     43,101,071          460,272          270,912       189,360            0
+ 36     44,478,601          473,232          278,472       194,760            0
+58.84% (278,472B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.91% (155,760B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->32.91% (155,760B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->32.87% (155,552B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->32.87% (155,552B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.04% (208B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.69% (116,832B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.66% (116,676B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.66% (116,676B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (156B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.08% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.08% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.08% (5,120B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.16% (760B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37     45,340,737          492,912          289,952       202,960            0
+ 38     46,900,335          503,808          296,308       207,500            0
+ 39     48,571,317          530,400          311,820       218,580            0
+ 40     49,955,393          541,680          318,400       223,280            0
+ 41     51,196,838          564,528          331,728       232,800            0
+ 42     52,143,185          571,488          335,788       235,700            0
+ 43     53,329,145          595,056          349,536       245,520            0
+ 44     54,820,054          606,000          355,920       250,080            0
+ 45     55,999,374          616,848          362,248       254,600            0
+ 46     56,985,016          639,024          375,184       263,840            0
+58.71% (375,184B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.02% (211,024B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->33.02% (211,024B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->32.98% (210,736B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->32.98% (210,736B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.05% (288B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.77% (158,280B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.74% (158,064B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.74% (158,064B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.92% (5,880B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 47     58,425,607          648,672          380,812       267,860            0
+ 48     59,818,402          674,592          395,932       278,660            0
+ 49     61,040,773          684,000          401,420       282,580            0
+58.69% (401,420B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.04% (226,016B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->33.04% (226,016B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->33.00% (225,712B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->33.00% (225,712B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.04% (304B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.78% (169,524B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.75% (169,296B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.75% (169,296B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.86% (5,880B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50     61,260,339          685,200          402,120       283,080            0
+ 51     61,457,192          686,736          403,016       283,720            0
+ 52     61,649,328          687,984          403,744       284,240            0
+ 53     61,844,098          689,376          404,556       284,820            0
+ 54     62,034,952          697,248          409,148       288,100            0
+ 55     62,225,646          705,984          414,244       291,740            0
+ 56     62,427,668          707,760          415,280       292,480            0
+ 57     62,623,860          708,096          415,476       292,620            0
+ 58     62,820,572          709,056          416,036       293,020            0
+ 59     63,023,786          710,160          416,680       293,480            0
+58.67% (416,680B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.05% (234,736B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->33.05% (234,736B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->33.01% (234,416B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->33.01% (234,416B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.05% (320B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.79% (176,064B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.76% (175,824B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.76% (175,824B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.83% (5,880B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60     63,219,510          711,696          417,576       294,120            0
+ 61     63,430,557          713,664          418,724       294,940            0
+ 62     63,626,086          715,440          419,760       295,680            0
+ 63     63,827,653          717,360          420,880       296,480            0
+ 64     64,059,593          718,848          421,748       297,100            0
+ 65     64,250,779          720,864          422,924       297,940            0
+ 66     64,441,635          722,496          423,876       298,620            0
+ 67     64,638,138          724,176          424,856       299,320            0
+ 68     64,696,511          724,728          425,180       299,548            0
+58.67% (425,180B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.06% (239,600B) 0x401558: cdsl_queue_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->33.06% (239,600B) 0x400FEF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   ->33.02% (239,280B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   | ->33.02% (239,280B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+|   |   
+|   ->00.04% (320B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->24.80% (179,700B) 0x400F7F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| ->24.76% (179,460B) 0x401265: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| | ->24.76% (179,460B) 0x401406: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_sll)
+| |   
+| ->00.03% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.81% (5,880B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+Command:            ./dijkstra_opt_dll input.dat
+Massif arguments:   (none)
+ms_print arguments: massif.out.3217
+--------------------------------------------------------------------------------
+
+
+    KB
+941.8^                                                                       #
+     |                                                                    ::@#
+     |                                                                 @::@:@#
+     |                                                              :@:@::@:@#
+     |                                                           @:@:@:@::@:@#
+     |                                                        :::@:@:@:@::@:@#
+     |                                                     ::::: @:@:@:@::@:@#
+     |                                                 @:::::::: @:@:@:@::@:@#
+     |                                              :::@: :::::: @:@:@:@::@:@#
+     |                                          :::::::@: :::::: @:@:@:@::@:@#
+     |                                        ::: : :::@: :::::: @:@:@:@::@:@#
+     |                                    ::@:::: : :::@: :::::: @:@:@:@::@:@#
+     |                                 :::: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |                             ::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |                           ::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |                       ::::::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |                   @@::::::::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |                 ::@ ::::::::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |             ::::: @ ::::::::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+     |           ::: ::: @ ::::::::::::: :: @:::: : :::@: :::::: @:@:@:@::@:@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   61.81
+
+Number of snapshots: 98
+ Detailed snapshots: [12, 29, 39, 47, 49, 59, 69, 79, 89, 97 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        188,499            4,944            4,888            56            0
+  2      7,168,172            4,968            4,900            68            0
+  3      8,246,022           32,680           20,488        12,192            0
+  4      8,931,936           38,824           23,944        14,880            0
+  5     10,421,914           59,688           35,680        24,008            0
+  6     11,530,781           89,520           52,904        36,616            0
+  7     12,449,979           99,376           58,448        40,928            0
+  8     13,868,188          135,600           78,824        56,776            0
+  9     14,985,955          144,048           83,576        60,472            0
+ 10     15,764,092          152,560           88,364        64,196            0
+ 11     17,167,359          187,504          108,020        79,484            0
+ 12     17,996,678          194,864          112,160        82,704            0
+57.56% (112,160B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->36.35% (70,824B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->36.35% (70,824B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->36.30% (70,728B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->36.30% (70,728B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (96B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.18% (35,424B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.15% (35,376B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.15% (35,376B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.02% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.63% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.63% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->02.10% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->02.10% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->02.10% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->02.10% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->02.10% (4,096B) 0x4011AF: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |         
+|   ->00.53% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.41% (792B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 13     19,123,546          206,960          118,964        87,996            0
+ 14     19,924,322          230,960          132,464        98,496            0
+ 15     20,887,868          241,456          138,368       103,088            0
+ 16     21,817,250          253,424          145,100       108,324            0
+ 17     22,514,853          262,000          149,924       112,076            0
+ 18     23,586,542          288,112          164,612       123,500            0
+ 19     24,533,312          297,904          170,120       127,784            0
+ 20     25,966,439          332,016          189,308       142,708            0
+ 21     26,840,882          338,672          193,052       145,620            0
+ 22     27,613,442          348,272          198,452       149,820            0
+ 23     28,598,850          377,264          214,760       162,504            0
+ 24     29,600,484          385,648          219,476       166,172            0
+ 25     30,369,523          393,456          223,868       169,588            0
+ 26     31,611,388          423,024          240,500       182,524            0
+ 27     32,423,199          431,024          245,000       186,024            0
+ 28     33,211,661          442,032          251,192       190,840            0
+ 29     34,250,444          468,568          266,120       202,448            0
+56.79% (266,120B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.02% (173,472B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.02% (173,472B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->36.97% (173,232B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->36.97% (173,232B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.51% (86,736B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.49% (86,616B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.49% (86,616B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (120B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.09% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.09% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.09% (5,120B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.17% (792B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 30     35,522,485          478,960          271,964       206,996            0
+ 31     36,648,220          509,360          289,064       220,296            0
+ 32     37,491,110          518,320          294,104       224,216            0
+ 33     38,664,994          543,600          308,324       235,276            0
+ 34     39,674,309          556,528          315,596       240,932            0
+ 35     40,475,455          564,336          319,988       244,348            0
+ 36     41,823,102          600,560          340,364       260,196            0
+ 37     42,782,914          607,600          344,324       263,276            0
+ 38     43,577,434          615,984          349,040       266,944            0
+ 39     44,915,312          649,072          367,652       281,420            0
+56.64% (367,652B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.15% (241,152B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.15% (241,152B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.10% (240,816B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.10% (240,816B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (336B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.58% (120,588B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.55% (120,420B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.55% (120,420B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (168B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.91% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40     45,733,184          657,968          372,656       285,312            0
+ 41     47,137,234          672,944          381,080       291,864            0
+ 42     47,966,164          698,224          395,300       302,924            0
+ 43     48,655,186          705,264          399,260       306,004            0
+ 44     49,842,462          718,000          406,424       311,576            0
+ 45     50,611,705          730,776          413,612       317,164            0
+ 46     51,814,954          756,976          428,348       328,628            0
+ 47     53,201,167          788,208          445,916       342,292            0
+56.57% (445,916B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.21% (293,328B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.21% (293,328B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.16% (292,920B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.16% (292,920B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (408B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.61% (146,676B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.58% (146,472B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.58% (146,472B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (204B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.75% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48     54,252,490          799,664          452,360       347,304            0
+ 49     55,295,947          810,480          458,444       352,036            0
+56.56% (458,444B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.22% (301,680B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.22% (301,680B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.17% (301,272B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.17% (301,272B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (408B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.61% (150,852B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.59% (150,648B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.59% (150,648B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (204B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.73% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50     55,491,838          812,144          459,380       352,764            0
+ 51     55,684,623          814,768          460,856       353,912            0
+ 52     55,886,814          817,392          462,332       355,060            0
+ 53     56,075,316          820,184          463,904       356,280            0
+ 54     56,263,973          823,216          465,608       357,608            0
+ 55     56,452,805          826,096          467,228       358,868            0
+ 56     56,660,766          841,712          476,012       365,700            0
+ 57     56,849,279          847,792          479,432       368,360            0
+ 58     57,086,648          850,096          480,728       369,368            0
+ 59     57,275,358          850,544          480,980       369,564            0
+56.55% (480,980B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.24% (316,704B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.24% (316,704B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.18% (316,272B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.18% (316,272B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (432B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.62% (158,364B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.59% (158,148B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.59% (158,148B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.70% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60     57,479,767          853,168          482,456       370,712            0
+ 61     57,722,300          854,128          482,996       371,132            0
+ 62     57,917,556          856,944          484,580       372,364            0
+ 63     58,107,289          858,224          485,300       372,924            0
+ 64     58,301,137          860,528          486,596       373,932            0
+ 65     58,529,591          862,960          487,964       374,996            0
+ 66     58,723,748          865,648          489,476       376,172            0
+ 67     58,922,482          868,784          491,240       377,544            0
+ 68     59,111,677          871,344          492,680       378,664            0
+ 69     59,302,699          873,968          494,156       379,812            0
+56.54% (494,156B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.24% (325,488B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.24% (325,488B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.19% (325,056B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.19% (325,056B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (432B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.62% (162,756B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.60% (162,540B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.60% (162,540B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.02% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.68% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 70     59,499,221          876,720          495,704       381,016            0
+ 71     59,688,162          892,784          504,740       388,044            0
+ 72     59,893,251          897,264          507,260       390,004            0
+ 73     60,092,151          897,840          507,584       390,256            0
+ 74     60,336,594          898,864          508,160       390,704            0
+ 75     60,534,300          902,640          510,284       392,356            0
+ 76     60,726,176          905,712          512,012       393,700            0
+ 77     60,953,824          906,736          512,588       394,148            0
+ 78     61,150,396          910,064          514,460       395,604            0
+ 79     61,370,298          911,664          515,360       396,304            0
+56.53% (515,360B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.25% (339,624B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.25% (339,624B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.20% (339,168B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.20% (339,168B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (456B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.63% (169,824B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.60% (169,596B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.60% (169,596B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (228B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.65% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 80     61,560,948          913,648          516,476       397,172            0
+ 81     61,757,854          915,312          517,412       397,900            0
+ 82     61,948,490          917,168          518,456       398,712            0
+ 83     62,137,133          926,128          523,496       402,632            0
+ 84     62,326,302          938,480          530,444       408,036            0
+ 85     62,540,677          941,744          532,280       409,464            0
+ 86     62,737,113          942,192          532,532       409,660            0
+ 87     62,934,117          943,472          533,252       410,220            0
+ 88     63,137,643          944,944          534,080       410,864            0
+ 89     63,333,703          946,992          535,232       411,760            0
+56.52% (535,232B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.26% (352,872B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.26% (352,872B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.21% (352,392B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.21% (352,392B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (480B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.63% (176,448B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.61% (176,208B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.61% (176,208B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.03% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.62% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 90     63,545,138          949,616          536,708       412,908            0
+ 91     63,735,215          951,920          538,004       413,916            0
+ 92     63,924,578          954,416          539,408       415,008            0
+ 93     64,114,598          956,400          540,524       415,876            0
+ 94     64,308,453          958,128          541,496       416,632            0
+ 95     64,501,343          961,072          543,152       417,920            0
+ 96     64,691,259          962,864          544,160       418,704            0
+ 97     64,813,129          964,376          545,012       419,364            0
+56.51% (545,012B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.27% (359,400B) 0x4025C6: cdsl_deque_list_lock_based_pthread_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->37.27% (359,400B) 0x400E1F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   ->37.22% (358,920B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   | ->37.22% (358,920B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+|   |   
+|   ->00.05% (480B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->18.63% (179,700B) 0x400DAF: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| ->18.61% (179,460B) 0x401095: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| | ->18.61% (179,460B) 0x401236: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dll)
+| |   
+| ->00.02% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.61% (5,912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+Command:            ./dijkstra_opt_dynarr input.dat
+Massif arguments:   (none)
+ms_print arguments: massif.out.3269
+--------------------------------------------------------------------------------
+
+
+    KB
+360.7^                                                                       #
+     |                                                                    :@@#
+     |                                                                 ::::@@#
+     |                                                               @:: ::@@#
+     |                                                           ::::@:: ::@@#
+     |                                                       ::::::: @:: ::@@#
+     |                                                    :::::: ::: @:: ::@@#
+     |                                                :::::: ::: ::: @:: ::@@#
+     |                                             :::: :::: ::: ::: @:: ::@@#
+     |                                          :::: :: :::: ::: ::: @:: ::@@#
+     |                                     :::::: :: :: :::: ::: ::: @:: ::@@#
+     |                                 ::::: :: : :: :: :::: ::: ::: @:: ::@@#
+     |                              ::::: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |                           ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |                        :::::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |                     ::::: ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |                ::::::: :: ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |            :::::: : :: :: ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |         :::: :::: : :: :: ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+     |       :::::: :::: : :: :: ::::: :: :: :: : :: :: :::: ::: ::: @:: ::@@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   93.99
+
+Number of snapshots: 74
+ Detailed snapshots: [3, 45, 53, 63, 73 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        186,098            4,816            4,768            48            0
+  2      7,165,771            4,840            4,780            60            0
+  3      7,340,127           17,560           14,168         3,392            0
+80.68% (14,168B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.99% (6,144B) 0x400F49: cdsl_dyn_array_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->34.99% (6,144B) 0x40099F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   ->34.99% (6,144B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|     ->34.99% (6,144B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|       
+->23.33% (4,096B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->23.33% (4,096B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->23.33% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|     ->23.33% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|       ->23.33% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|         ->23.33% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|           ->23.33% (4,096B) 0x400D2C: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|             
+->18.72% (3,288B) 0x40092F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->18.66% (3,276B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| | ->18.66% (3,276B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| |   
+| ->00.07% (12B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->03.14% (552B) 0x50D2F28: fopen@@GLIBC_2.2.5 (iofopen.c:65)
+| ->03.14% (552B) 0x400CFC: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   
+->00.50% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      9,044,022           18,256           13,488         4,768            0
+  5     10,574,681           22,576           15,648         6,928            0
+  6     12,749,231           37,912           23,824        14,088            0
+  7     14,108,157           41,296           25,516        15,780            0
+  8     15,741,516           44,848           27,292        17,556            0
+  9     17,508,031           56,392           33,064        23,328            0
+ 10     19,865,852           61,024           35,380        25,644            0
+ 11     21,242,290           64,840           37,288        27,552            0
+ 12     22,867,070           77,560           43,648        33,912            0
+ 13     24,351,977           80,320           45,028        35,292            0
+ 14     26,326,643           85,360           47,548        37,812            0
+ 15     29,020,959           98,152           53,944        44,208            0
+ 16     31,376,615          106,216           57,976        48,240            0
+ 17     33,201,174          115,696           62,716        52,980            0
+ 18     34,652,223          118,864           64,300        54,564            0
+ 19     37,049,607          132,256           70,996        61,260            0
+ 20     38,453,740          134,680           72,208        62,472            0
+ 21     40,274,507          145,384           77,560        67,824            0
+ 22     42,165,539          150,712           80,224        70,488            0
+ 23     43,655,588          154,192           81,964        72,228            0
+ 24     45,959,074          166,384           88,060        78,324            0
+ 25     47,376,093          169,528           89,632        79,896            0
+ 26     49,655,112          181,600           95,668        85,932            0
+ 27     51,454,750          184,840           97,288        87,552            0
+ 28     54,209,226          198,760          104,248        94,512            0
+ 29     56,114,800          202,360          106,048        96,312            0
+ 30     58,385,566          214,336          112,036       102,300            0
+ 31     60,420,870          218,920          114,328       104,592            0
+ 32     62,049,153          230,368          120,052       110,316            0
+ 33     64,707,625          236,488          123,112       113,376            0
+ 34     66,937,859          244,192          126,964       117,228            0
+ 35     68,615,399          253,720          131,728       121,992            0
+ 36     69,809,645          255,736          132,736       123,000            0
+ 37     71,448,472          263,656          136,696       126,960            0
+ 38     73,179,748          270,424          140,080       130,344            0
+ 39     75,493,686          277,312          143,524       133,788            0
+ 40     76,732,121          288,472          149,104       139,368            0
+ 41     78,566,741          291,616          150,676       140,940            0
+ 42     80,967,140          304,552          157,144       147,408            0
+ 43     82,166,498          305,896          157,816       148,080            0
+ 44     83,827,008          310,360          160,048       150,312            0
+ 45     86,437,237          326,440          168,088       158,352            0
+51.49% (168,088B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.47% (158,232B) 0x40092F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->48.41% (158,016B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| | ->48.41% (158,016B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| |   
+| ->00.07% (216B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.57% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.57% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.25% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->01.25% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->01.25% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->01.25% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.25% (4,096B) 0x400D2C: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   |         
+|   ->00.31% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.25% (4,096B) 0x400F49: cdsl_dyn_array_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->01.25% (4,096B) 0x40099F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   ->01.25% (4,096B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|     ->01.25% (4,096B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|       
+->00.20% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46     88,814,136          330,496          170,116       160,380            0
+ 47     90,277,187          336,712          173,224       163,488            0
+ 48     92,291,803          347,032          178,384       168,648            0
+ 49     93,755,576          350,536          180,136       170,400            0
+ 50     93,932,281          351,016          180,376       170,640            0
+ 51     94,110,691          351,640          180,688       170,952            0
+ 52     94,299,745          352,528          181,132       171,396            0
+ 53     94,488,212          358,528          184,132       174,396            0
+51.36% (184,132B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.61% (174,276B) 0x40092F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->48.54% (174,036B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| | ->48.54% (174,036B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.43% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.43% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.14% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->01.14% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->01.14% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->01.14% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.14% (4,096B) 0x400D2C: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   |         
+|   ->00.29% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.14% (4,096B) 0x400F49: cdsl_dyn_array_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->01.14% (4,096B) 0x40099F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   ->01.14% (4,096B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|     ->01.14% (4,096B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|       
+->00.18% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 54     94,663,881          359,800          184,768       175,032            0
+ 55     94,838,516          360,280          185,008       175,272            0
+ 56     95,150,607          360,904          185,320       175,584            0
+ 57     95,469,664          361,048          185,392       175,656            0
+ 58     95,701,385          361,168          185,452       175,716            0
+ 59     95,946,640          361,528          185,632       175,896            0
+ 60     96,122,754          361,744          185,740       176,004            0
+ 61     96,333,281          362,104          185,920       176,184            0
+ 62     96,518,519          362,488          186,112       176,376            0
+ 63     96,703,964          362,920          186,328       176,592            0
+51.34% (186,328B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.63% (176,472B) 0x40092F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->48.56% (176,232B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| | ->48.56% (176,232B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| |   
+| ->00.07% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.41% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.41% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.13% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->01.13% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->01.13% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->01.13% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.13% (4,096B) 0x400D2C: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   |         
+|   ->00.28% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.13% (4,096B) 0x400F49: cdsl_dyn_array_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->01.13% (4,096B) 0x40099F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   ->01.13% (4,096B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|     ->01.13% (4,096B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|       
+->00.18% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64     96,884,241          363,808          186,772       177,036            0
+ 65     97,085,161          364,000          186,868       177,132            0
+ 66     97,267,134          364,744          187,240       177,504            0
+ 67     97,443,797          365,176          187,456       177,720            0
+ 68     97,629,971          365,872          187,804       178,068            0
+ 69     97,849,214          366,448          188,092       178,356            0
+ 70     98,024,233          367,096          188,416       178,680            0
+ 71     98,209,829          368,104          188,920       179,184            0
+ 72     98,388,880          368,512          189,124       179,388            0
+ 73     98,554,141          369,376          189,556       179,820            0
+51.32% (189,556B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.65% (179,700B) 0x40092F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->48.58% (179,460B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| | ->48.58% (179,460B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| |   
+| ->00.06% (240B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.39% (5,120B) 0x50D226A: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.39% (5,120B) 0x50E2447: _IO_doallocbuf (genops.c:365)
+|   ->01.11% (4,096B) 0x50E1322: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+|   | ->01.11% (4,096B) 0x50E24C0: _IO_default_uflow (genops.c:380)
+|   |   ->01.11% (4,096B) 0x50BFCC8: _IO_vfscanf (vfscanf.c:630)
+|   |     ->01.11% (4,096B) 0x50D03C4: __isoc99_fscanf (isoc99_fscanf.c:34)
+|   |       ->01.11% (4,096B) 0x400D2C: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   |         
+|   ->00.28% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->01.11% (4,096B) 0x400F49: cdsl_dyn_array_enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+| ->01.11% (4,096B) 0x40099F: enqueue (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|   ->01.11% (4,096B) 0x400C12: dijkstra (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|     ->01.11% (4,096B) 0x400DB3: main (in /home/user/Desktop/lab_material_2/DDTR/dijsktra/dijkstra_opt_dynarr)
+|       
+->00.17% (640B) in 1+ places, all below ms_print's threshold (01.00%)
+
