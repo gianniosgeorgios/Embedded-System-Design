@@ -33,5 +33,3 @@ We run the application with all the different combinations of data structures.
 
 For each combination, we note its results on the memory accesses and the memory footprint. We find the **Pareto Optimal** Solution.
 <img src="https://user-images.githubusercontent.com/50949470/111882965-2527f080-89c1-11eb-91b4-c1fab6a310b9.png" width="400" height=auto>
-
-*For more information, go to [report](https://github.com/chrisbetze/Embedded-System-Design/blob/91a22a26b7c050c0189c8f9789ee26b26646fb72/Lab2/report.pdf).*
