@@ -42,4 +42,3 @@ For the final optimal code, we calculate the execution times (also with python s
 | **Randomsearch**  |  0.042779  |  0.043983  | 0.048376  |
 | **Simplex**  | 0.042181  | 0.043321  | 0.047977  |
 
-*For more information, go to [report](https://github.com/chrisbetze/Embedded-System-Design/blob/b9e148ddafebfbe64936d60e5f654fa5abf5a45a/Lab1/report.pdf).*
