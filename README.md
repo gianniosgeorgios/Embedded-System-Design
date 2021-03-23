@@ -7,3 +7,7 @@ Laboratory exercises on cards with ARM, FPGA and sensors
 #### Lab3: ARM Assembly
 #### Lab4: High-Level Synthesis for FPGAs
 #### Lab5: Embedded Linux - Crosscompiling - RTOS
+
+##
+
+Collaborator: [Christos Betzelos](https://github.com/chrisbetze) 
