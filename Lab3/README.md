@@ -36,7 +36,7 @@ The purpose of the exercise is to create 2 programs, one in **C on the host** ma
 * The blank character (ascii number 32) is excluded from counting. 
 * In case two or more characters have a maximum occurrence frequency, the program will return to the host the character with the smallest ascii code.
 
-*The full steps of the program and the string manipulation are described in the [report](https://github.com/chrisbetze/Embedded-System-Design/blob/25cee5b9eef1aebe16e5c4db56757fa778e92c3c/Lab3/report.pdf)*.
+*The full steps of the program and the string manipulation are described in the report.
 
 ## Part 3: Linking C and ARM assembly code
 The purpose of this exercise is to combine code written in C, with functions written in ARM assembly.
