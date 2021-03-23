@@ -45,4 +45,4 @@ Comparing the optimized with the original (unoptimized), we notice that the **Sp
 
 ![Capture1](https://user-images.githubusercontent.com/50949470/111987471-f1abaa00-8b17-11eb-8d97-6207584f00f5.PNG)
 
-*For more information and extra comments about the application, the HLS pragmas, the tools and the results, go to [report](https://github.com/chrisbetze/Embedded-System-Design/blob/df178fb8ff901ada9729b0ebc322c05afa57ccf4/Lab4/report.pdf)*
+*For more information and extra comments about the application, the HLS pragmas, the tools and the results, go to report.*
