@@ -22,8 +22,7 @@ In this string the following conversions are done:
 
 The program is continuous and terminates when receives as input a string of length one, consisting of the character 'Q' or 'q'.
 
-*The full steps of the program are described in the [report](https://github.com/chrisbetze/Embedded-System-Design/blob/25cee5b9eef1aebe16e5c4db56757fa778e92c3c/Lab3/report.pdf)*.
-
+*The full steps of the program are described in the report.*
 ## Part 2: Communication of guest and host machines through a serial port
 <img src="https://user-images.githubusercontent.com/50949470/111884030-894db300-89c7-11eb-8317-c5c7bd3eb23a.PNG" width="600" height=auto>
 
